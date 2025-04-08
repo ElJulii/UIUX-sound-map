@@ -1,61 +1,43 @@
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import { Howl } from 'howler';
-import soundsData from 'src/data/sounds.json';
+function fetchCountryInfoByCoordinates(longitude, latitude) {
+    const username = 'YOUR_GEONAMES_USERNAME'; // Replace with your GeoNames username
 
-// Initialize the map
-const map = L.map('map').setView([20, 0], 2);
+    // Make a request to the GeoNames API
+    fetch(`http://api.geonames.org/countryInfoJSON?lat=${latitude}&lng=${longitude}&username=${username}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log('API Response:', data);  // Log the API response to the console
 
-// Load and display tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+            if (data.geonames && data.geonames.length > 0) {
+                const countryInfo = data.geonames[0];
 
-// Function to create markers
-const markers = [];
-soundsData.forEach(sound => {
-    const marker = L.marker([sound.lat, sound.lng]).addTo(map);
-    marker.bindPopup(`<b>${sound.title}</b><br>${sound.location}`);
+                // Extract the country name and other relevant info
+                const countryName = countryInfo.countryName || 'Unknown';
+                const countryFlagUrl = `https://flagcdn.com/w320/${countryInfo.countryCode.toLowerCase()}.png`;
+                const countryDescription = getCountryDescription(countryName);
 
-    // Sound preview on hover
-    let soundPreview = new Howl({
-        src: [`/public/sounds/${sound.file}`],
-        volume: 0.5,
-    });
+                // Update the information panel with fetched data
+                document.getElementById('country-name').innerText = countryName;
+                document.getElementById('country-flag').src = countryFlagUrl;
+                document.getElementById('country-description').innerText = countryDescription;
 
-    marker.on('mouseover', () => soundPreview.play());
-    marker.on('mouseout', () => soundPreview.stop());
+                // Show the country info panel when a country is clicked
+                document.getElementById('country-info').style.display = 'block';
+            } else {
+                document.getElementById('country-name').innerText = "No data found";
+                document.getElementById('country-flag').src = "";
+                document.getElementById('country-description').innerText = "No information available.";
 
-    markers.push({ marker, ...sound });
-});
+                // Show the country info panel even when no data is found
+                document.getElementById('country-info').style.display = 'block';
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching country data:", error);
+            document.getElementById('country-name').innerText = "Error fetching data";
+            document.getElementById('country-flag').src = "";
+            document.getElementById('country-description').innerText = "No information available.";
 
-// Filtering function
-const applyFilters = (filters) => {
-    markers.forEach(({ marker, mood, type, title, location }) => {
-        const matchesMood = filters.mood ? mood.includes(filters.mood) : true;
-        const matchesType = filters.type ? type.includes(filters.type) : true;
-        const matchesSearch = filters.search ? (title.toLowerCase().includes(filters.search) || location.toLowerCase().includes(filters.search)) : true;
-
-        if (matchesMood && matchesType && matchesSearch) {
-            marker.addTo(map);
-        } else {
-            marker.remove();
-        }
-    });
-};
-
-// Event listeners for filter controls
-document.getElementById('filter-mood')?.addEventListener('change', (e) => {
-    filters.mood = e.target.value;
-    applyFilters(filters);
-});
-document.getElementById('filter-type')?.addEventListener('change', (e) => {
-    filters.type = e.target.value;
-    applyFilters(filters);
-});
-document.getElementById('search-bar')?.addEventListener('input', (e) => {
-    filters.search = e.target.value.toLowerCase();
-    applyFilters(filters);
-});
-
-export default map;
+            // Show the country info panel even if there's an error
+            document.getElementById('country-info').style.display = 'block';
+        });
+}
