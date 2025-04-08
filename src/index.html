@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
     <title>Terra Trivia</title>
-
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
-
     <style>
         body, html {
             margin: 0;
@@ -131,6 +129,9 @@
 
         .close-button:hover {
             background-color: #999;
+        }
+        .leaflet-interactive:focus {
+            outline: none !important;
         }
     </style>
 </head>
@@ -740,7 +741,7 @@
                 code: "pa",
                 description: "Panama is famous for the Panama Canal, tropical rainforests, and vibrant culture blending indigenous, African, and European influences."
             },
-            "Papua": {
+            "Papua New Guinea": {
                 code: "pg",
                 description: "Papua New Guinea is known for its rugged mountains, tropical forests, and rich cultural diversity with hundreds of indigenous languages."
             },
@@ -841,7 +842,7 @@
                 code: "si",
                 description: "Slovenia is famous for its picturesque lakes, especially Lake Bled, and its impressive caves and natural landscapes."
             },
-            "Solomon": {
+            "Solomon Islands": {
                 code: "sb",
                 description: "Solomon Islands is known for its coral reefs, WWII history, and beautiful tropical islands in the Pacific Ocean."
             },
@@ -849,6 +850,11 @@
                 code: "so",
                 description: "Somalia is known for its long coastline along the Horn of Africa, with rich history and cultural diversity influenced by Arab and African traditions."
             },
+            "New Caledonia": {
+                "code": "nc",
+                "description": "New Caledonia is a French overseas territory known for its stunning coral reefs, lush rainforests, and rich cultural heritage. The capital, Nouméa, offers a blend of French and Melanesian influences, making it a unique destination in the Pacific."
+            },
+
             "South Africa": {
                 code: "za",
                 description: "South Africa offers a diverse range of experiences, from safaris in Kruger National Park to the vibrant cities of Cape Town and Johannesburg."
@@ -1043,10 +1049,10 @@
                             showCountryInfoByName(countryName, countryCode);
                         });
                     }
+
                 }).addTo(map);
             });
     });
 </script>
-
 </body>
 </html>
