@@ -7,156 +7,29 @@
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
-            font-family: 'Inter', sans-serif;
-            background-color: #f5f5f5;
-            overflow: hidden;
-        }
-
-        .container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #map {
-            flex: 1;
-        }
-
-        header {
-            position: absolute;
-            top: 10px;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 30px;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            margin: 0 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-        }
-
-        .buttons-container {
-            display: flex;
-            gap: 10px;
-        }
-
-        .button {
-            padding: 8px 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        .info-bar {
-            text-align: center;
-            background-color: #fff;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .country-info {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            text-align: center;
-            position: absolute;
-            top: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            width: 300px;
-        }
-
-        .flag-icon {
-            font-size: 60px;
-            margin: 10px 0;
-        }
-
-        /* About Us Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 400px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            z-index: 2000;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
-        }
-
-        .modal h2 {
-            margin-top: 0;
-        }
-
-        .modal ul {
-            padding-left: 20px;
-        }
-
-        .close-button {
-            margin-top: 10px;
-            background-color: #ccc;
-            color: black;
-        }
-
-        .close-button:hover {
-            background-color: #999;
-        }
-        .leaflet-interactive:focus {
-            outline: none !important;
-        }
-    </style>
+    <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
-
-<header>
+<!--    you can here continue adding the buttons-->
+<header class="header">
     <h1>Terra Trivia</h1>
-    <div class="buttons-container">
-        <button class="button" id="about-us-btn">About Us</button>
+    <div class="header__buttons-container">
+        <button class="button button--about-us" id="about-us-btn">About Us</button>
     </div>
 </header>
 
-<div class="container">
-    <div id="map"></div>
+<main class="main">
+    <div class="main__map" id="map"></div>
 
-    <div class="country-info" id="country-info" style="display: none;">
+    <div class="country-info" id="country-info">
         <h2 id="country-name">Select a country</h2>
         <div id="country-flag" class="flag-icon"></div>
         <p id="country-description">Click on a country on the map to learn more!</p>
-        <button class="button" id="explore-more-btn" style="margin-top: 10px;">Explore More</button>
+        <button class="button" id="explore-more-btn" >Explore More</button>
     </div>
-</div>
+</main>
 
 <div class="buttons-container">
-    <button class="button">About Us</button>
     <div id="about-modal" style="display:none; position:fixed; top:10%; left:50%; transform:translateX(-50%);
     background:white; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:2000; width:90%; max-width:500px;">
         <h2 style="margin-top:0;">We believe every country holds a story and trivia makes it sparkle.</h2>
@@ -170,13 +43,10 @@
             <li><strong>Albaraa Shagat</strong>, Egypt – <a href="https://t.me/barbarisma9" target="_blank">@barbarisma9</a></li>
         </ul>
         <h2>Let's connect your voice makes this universe brighter.</h2>
-        <button id="close-about" style="margin-top:10px; padding:8px 15px; background-color:#007bff; color:white; border:none; border-radius:5px; cursor:pointer;">Close</button>
+        <button class="button" id="close-about">Close</button>
     </div>
 </div>
 
-<div class="info-bar">
-    <p>Because sometimes ... the best journeys start with a single click</p>
-</div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script type="module" src="src/index.js"></script>

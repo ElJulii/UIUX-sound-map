@@ -10,20 +10,20 @@ body, html {
 }
 
 /* Fullscreen container for the map */
-.container {
+.main {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 /* Map takes up remaining space */
-#map {
+.main__map {
     flex: 1;
 }
 
 /* Fixed header overlay */
 
-header {
+.header {
     position: absolute;
     top: 10px;
     left: 0;
@@ -71,7 +71,7 @@ h1 {
 }
 
 /* Info bar at the bottom of the map */
-#info-bar {
+.info-bar {
     text-align: center;
     background-color: #fff;
     padding: 10px;
@@ -82,7 +82,7 @@ h1 {
 }
 
 /* Buttons container */
-.buttons-container {
+.header__buttons-container {
     display: flex;
     gap: 10px;
 }
