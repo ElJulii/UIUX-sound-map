@@ -817,13 +817,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // About Us button functionality
-    document.querySelector('.button:nth-child(1)').addEventListener('click', () => {
-        document.getElementById('about-modal').style.display = 'block';
-    });
-
-    document.getElementById('close-about').addEventListener('click', () => {
-        document.getElementById('about-modal').style.display = 'none';
-    });
+    // document.querySelector('.button:nth-child(1)').addEventListener('click', () => {
+    //     document.getElementById('about-modal').style.display = 'block';
+    // });
+    //
+    // document.getElementById('close-about').addEventListener('click', () => {
+    //     document.getElementById('about-modal').style.display = 'none';
+    // });
 
     function showCountryInfoByName(name, fallbackCode = '') {
         const info = countryData[name];
