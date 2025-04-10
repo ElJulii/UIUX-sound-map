@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 
-/*STYLE FOR PHONE*/
-/* Main container*/
 
 body {
     background-color: #aad3df;
 }
+
+/*STYLE FOR PHONE*/
+/* Main container*/
 
 .main {
     width: 100%;
@@ -29,6 +30,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    outline: none;
 }
 
 .main__map .leaflet-control-attribution {
@@ -38,6 +40,20 @@ body {
 .leaflet-touch {
     background-color: #aad3df;
 }
+
+.leaflet-interactive {
+    transition: fill 0.2s ease-in-out;
+}
+
+.leaflet-interactive:focus {
+    outline: none;
+    fill: #12572c;
+}
+
+.leaflet-interactive:hover {
+    fill: #12572c;
+}
+
 
 /*For PC map*/
 @container main-container (min-width: 501px) {
@@ -58,9 +74,10 @@ h1 {
 
 .header {
     color: white;
-    border: solid 2px white;
+    background-color: #0000014D;
     position: absolute;
     z-index: 2000;
+    width: 100dvw;
 }
 
 

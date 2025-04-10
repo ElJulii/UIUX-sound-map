@@ -4,31 +4,23 @@ document.getElementById('explore-more-btn').addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // const map = L.map('map', {
-    //     center: [15, 0],
-    //     zoom: 1,
-    //     zoomSnap: 0.1,
-    //     zoomDelta: 0.5,
-    //     scrollWheelZoom: false,
-    //     dragging: false,
-    //     zoomControl: false,
-    //     touchZoom: false,
-    //     doubleClickZoom: false,
-    //     boxZoom: false,
-    // });
 
     const map = L.map('map', {
         zoomSnap: 0.1,
         zoomDelta: 0.5,
         scrollWheelZoom: false,
-        dragging: false,
+        dragging: true,
         zoomControl: false,
         touchZoom: false,
         doubleClickZoom: false,
         boxZoom: false,
+        maxBounds: [
+            [-60, -180],
+            [78, 180]
+        ],
+        maxBoundsViscosity: 1.0
     });
 
-    // Capa base de OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap'
     }).addTo(map);
