@@ -16,12 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
         doubleClickZoom: false,
         boxZoom: false,
         maxBounds: [
-            [-90, -180],
+            [-80, -180],
             [90, 180]
         ],
         maxBoundsViscosity: 1.0
     });
-    document.getElementById('map').style.backgroundColor = '#00f';
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
@@ -865,10 +864,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(geoData => {
             L.geoJSON(geoData, {
                 style: {
-                    color: '#c0ff80', // color de las lineas
+                    color: '#333', // color de las lineas
                     weight: 1,
-                    fillColor: '#000', //color countries
-                    fillOpacity: 0.4,
+                    fillColor: '#050', //color countries
+                    fillOpacity: 0.5,
                 },
                 onEachFeature: (feature, layer) => {
                     const countryName = feature.properties.name || 'Unknown';
