@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-/*STYLE FOR PHONE*/
-/* Main container*/
 
 body {
-    background: url("https://s3-alpha-sig.figma.com/img/22ac/09b0/d04312bbb3f8364b9fd31b07a7739fc1?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ehKpxMTu74UwBTGb2W8FvpRv2btHd9kbYzAe7wQUvkUs62i2DCt16E9CtIubtUp8fcRq3-hjjR9nfH1cD6r2L-ZPT5W7zLjdJVOBkRUZZs5PdaD2NQ2E7l-OJUvaj~TbX3CnbLFeVuoR20miCnndkvDMUe4egny9lzQQYfTw-gxgmlxKdnZbvcKi79eNPEd35V1UhHCoz5euQgTfuu5p6UzgKE9c2u5zre9HbUiq09L3KhvUkC1LYGI3N4b8zBelA2HqqPdS4JjXUPrrdRpz7mXLYkLEoTpjILEGVUuN3Kal~sMaQVYYHZ~Ckycvgedccxcb0h7HAL0N2pmvL5nrTg__")
-center / cover no-repeat fixed ;
+    background-color: #aad3df;
 }
+
+/*STYLE FOR PHONE*/
+/* Main container*/
 
 .main {
     width: 100%;
@@ -25,19 +25,41 @@ center / cover no-repeat fixed ;
 .main__map {
     flex: 1;
     height: 55dvh;
-    width: clamp(400px, 100%, 600px);
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 50%;
-
+    outline: none;
 }
 
+.main__map .leaflet-control-attribution {
+    display: none;
+}
+
+.leaflet-touch {
+    background-color: #aad3df;
+}
+
+.leaflet-interactive {
+    transition: fill 0.2s ease-in-out;
+}
+
+.leaflet-interactive:focus {
+    outline: none;
+    fill: #12572c;
+}
+
+.leaflet-interactive:hover {
+    fill: #12572c;
+}
+
+
 /*For PC map*/
-@container main-container (min-width: 470px) {
+@container main-container (min-width: 501px) {
     .main__map {
-        height: 70dvh;
+        height: 90dvh;
+        width: 80dvw;
     }
 }
 
@@ -52,7 +74,10 @@ h1 {
 
 .header {
     color: white;
-    border: solid 2px white;
+    background-color: #0000014D;
+    position: absolute;
+    z-index: 2000;
+    width: 100dvw;
 }
 
 

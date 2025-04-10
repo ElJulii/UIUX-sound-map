@@ -4,9 +4,8 @@ document.getElementById('explore-more-btn').addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+
     const map = L.map('map', {
-        center: [20, -70],
-        zoom: 2,
         zoomSnap: 0.1,
         zoomDelta: 0.5,
         scrollWheelZoom: false,
@@ -16,11 +15,48 @@ document.addEventListener('DOMContentLoaded', () => {
         doubleClickZoom: false,
         boxZoom: false,
         maxBounds: [
-            [-80, -180],
-            [90, 180]
+            [-60, -180],
+            [78, 180]
         ],
         maxBoundsViscosity: 1.0
     });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    const SMALL_SCREEN = { center: [15, 0], zoom: 1 };
+    const LARGE_SCREEN = { center: [30, 6], zoom: 2.2 };
+    const BREAKPOINT = 500; // Ancho mínimo para pantalla grande (px)
+
+    // Función para interpolación lineal (ajuste progresivo)
+    function lerp(start, end, factor) {
+        return start + (end - start) * factor;
+    }
+
+    // Actualizar mapa según el ancho de pantalla
+    function updateMapView() {
+        const width = window.innerWidth;
+
+        // Calcular factor de interpolación (0 a 1)
+        const factor = Math.min(1, Math.max(0, (width - BREAKPOINT) / (window.screen.width - BREAKPOINT)));
+
+        // Interpolar centro y zoom
+        const currentCenter = [
+            lerp(SMALL_SCREEN.center[0], LARGE_SCREEN.center[0], factor),
+            lerp(SMALL_SCREEN.center[1], LARGE_SCREEN.center[1], factor)
+        ];
+        const currentZoom = lerp(SMALL_SCREEN.zoom, LARGE_SCREEN.zoom, factor);
+
+        map.setView(currentCenter, currentZoom);
+    }
+
+    // Configuración inicial y listener para redimensionamiento
+    updateMapView();
+    window.addEventListener('resize', () => {
+        requestAnimationFrame(updateMapView); // Optimización de rendimiento
+    });
+
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
@@ -864,10 +900,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(geoData => {
             L.geoJSON(geoData, {
                 style: {
-                    color: '#333', // color de las lineas
-                    weight: 1,
-                    fillColor: '#050', //color countries
-                    fillOpacity: 0.5,
+                    color: '#fff',
+                    weight: 0.1,
+                    fillColor: '#56a76c',
+                    fillOpacity: 1,
                 },
                 onEachFeature: (feature, layer) => {
                     const countryName = feature.properties.name || 'Unknown';
@@ -881,3 +917,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }).addTo(map);
         });
 });
+
