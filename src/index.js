@@ -845,7 +845,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showCountryInfo({ name, code, description }) {
         document.getElementById('country-name').innerText = name;
-        document.getElementById('country-flag').className = `flag-icon fi fi-${code}`;
+        document.getElementById('country-flag').className = `section-country-info__country-flag fi fi-${code}`;
         document.getElementById('country-description').innerText = description;
         document.getElementById('country-info').style.display = 'block';
     }

@@ -10,52 +10,26 @@
     <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
-<<<<<<< HEAD
-
-<!--<header>-->
-<!--    <h1>Terra Trivia</h1>-->
-<!--    <div class="buttons-container">-->
-<!--        <button class="button" id="about-us-btn">About Us</button>-->
-<!--    </div>-->
-<!--</header>-->
-=======
-<!--    you can here continue adding the buttons-->
-<header class="header">
-    <h1>Terra Trivia</h1>
-    <div class="header__buttons-container">
-        <button class="button button--about-us" id="about-us-btn">About Us</button>
-    </div>
-</header>
->>>>>>> 203452a318c4a5cc21a4bd08df76d4291485db16
-
 <main class="main">
     <div class="main__map" id="map"></div>
 
-    <div class="country-info" id="country-info">
-        <h2 id="country-name">Select a country</h2>
-        <div id="country-flag" class="flag-icon"></div>
-        <p id="country-description">Click on a country on the map to learn more!</p>
+    <header class="header">This edit the header, It has to has be buttons, icon, etc. Use BEM for name classes</header>
+
+    <section class="section-country-info" id="country-info">
+        <h2 class="section-country-info__h2" id="country-name"></h2>
+        <div id="country-flag" class="section-country-info__country-flag"></div>
+        <p class="section-country-info__country-description" id="country-description"></p>
         <button class="button" id="explore-more-btn" >Explore More</button>
-    </div>
+    </section>
 </main>
 
-<div class="buttons-container">
-    <div id="about-modal" style="display:none; position:fixed; top:10%; left:50%; transform:translateX(-50%);
-    background:white; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:2000; width:90%; max-width:500px;">
-        <h2 style="margin-top:0;">We believe every country holds a story and trivia makes it sparkle.</h2>
-        <ul style="padding-left: 20px;">
-            <li><strong>Maryam Kareem</strong>, Egypt – <a href="https://t.me/maryamk16" target="_blank">@maryamk16</a></li>
-            <li><strong>Radka Nhapulo</strong>, Mozambique – <a href="https://t.me/Radqueen258" target="_blank">@Radqueen258</a></li>
-            <li><strong>Julian Lara</strong>, Ecuador – <a href="https://t.me/Elluliias" target="_blank">@Elluliias</a></li>
-            <li><strong>Amanda Argotti</strong>, Ecuador – <a href="https://t.me/creoqueamyyy" target="_blank">@creoqueamyyy</a></li>
-            <li><strong>Camilo Duran</strong>, Colombia – <a href="https://t.me/RevengeDev" target="_blank">@RevengeDev</a></li>
-            <li><strong>Jéssica Chiponde</strong>, Mozambique – <a href="https://t.me/jevkeytty" target="_blank">@jevkeytty</a></li>
-            <li><strong>Albaraa Shagat</strong>, Egypt – <a href="https://t.me/barbarisma9" target="_blank">@barbarisma9</a></li>
-        </ul>
-        <h2>Let's connect your voice makes this universe brighter.</h2>
-        <button class="button" id="close-about">Close</button>
-    </div>
-</div>
+<dialog class="dialog-intro" open>
+    <form method="dialog" class="dialog-intro__form">
+        <h1 class="dialog-intro__h1"></h1>
+        <p></p>
+        <button class="button">Explore</button>
+    </form>
+</dialog>
 
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
