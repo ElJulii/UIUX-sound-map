@@ -5,19 +5,29 @@ document.getElementById('explore-more-btn').addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const map = L.map('map', {
-        center: [20, 0],
+        center: [20, -70],
         zoom: 2,
+        zoomSnap: 0.1,
+        zoomDelta: 0.5,
         scrollWheelZoom: false,
-        dragging: false,
+        dragging: true,
         zoomControl: false,
         touchZoom: false,
         doubleClickZoom: false,
-        boxZoom: false
+        boxZoom: false,
+        maxBounds: [
+            [-90, -180],
+            [90, 180]
+        ],
+        maxBoundsViscosity: 1.0
     });
+    document.getElementById('map').style.backgroundColor = '#00f';
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
+
+    map.invalidateSize()
 
     const countryData = {
         "Afghanistan": {
@@ -855,10 +865,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(geoData => {
             L.geoJSON(geoData, {
                 style: {
-                    color: '#333',
+                    color: '#c0ff80', // color de las lineas
                     weight: 1,
-                    fillColor: '#cce5ff',
-                    fillOpacity: 0.1
+                    fillColor: '#000', //color countries
+                    fillOpacity: 0.4,
                 },
                 onEachFeature: (feature, layer) => {
                     const countryName = feature.properties.name || 'Unknown';
