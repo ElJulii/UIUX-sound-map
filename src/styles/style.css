@@ -4,7 +4,14 @@
     box-sizing: border-box;
 }
 
+/*STYLE FOR PHONE*/
 /* Main container*/
+
+body {
+    background: url("https://s3-alpha-sig.figma.com/img/22ac/09b0/d04312bbb3f8364b9fd31b07a7739fc1?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ehKpxMTu74UwBTGb2W8FvpRv2btHd9kbYzAe7wQUvkUs62i2DCt16E9CtIubtUp8fcRq3-hjjR9nfH1cD6r2L-ZPT5W7zLjdJVOBkRUZZs5PdaD2NQ2E7l-OJUvaj~TbX3CnbLFeVuoR20miCnndkvDMUe4egny9lzQQYfTw-gxgmlxKdnZbvcKi79eNPEd35V1UhHCoz5euQgTfuu5p6UzgKE9c2u5zre9HbUiq09L3KhvUkC1LYGI3N4b8zBelA2HqqPdS4JjXUPrrdRpz7mXLYkLEoTpjILEGVUuN3Kal~sMaQVYYHZ~Ckycvgedccxcb0h7HAL0N2pmvL5nrTg__")
+center / cover no-repeat fixed ;
+}
+
 .main {
     height: 100vh;
     display: flex;
@@ -14,6 +21,12 @@
 
 .main__map {
     flex: 1;
+    height: 80dvh;
+    width: clamp(100px, 100%, 800px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -26,9 +39,8 @@ h1 {
 /*header*/
 
 .header {
-    position: absolute;
-    z-index: 2000;
-    border: solid 2px black;
+    color: white;
+    border: solid 2px white;
 }
 
 
@@ -101,3 +113,5 @@ h1 {
     z-index: 1000;
     width: 300px;
 }
+
+/* STYLE FOR PC*/
