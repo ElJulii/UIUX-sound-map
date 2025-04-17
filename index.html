@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
+
 <main class="main">
 
     <header class="header">This edit the header, It has to has be buttons, icon, etc. Use BEM for name classes</header>
@@ -22,6 +23,10 @@
         <p class="section-country-info__country-description" id="country-description"></p>
         <button class="button" id="explore-more-btn" >Explore More</button>
     </section>
+
+    <footer class="footer">
+        <p class="footer__content">&copy;</p>
+    </footer>
 </main>
 
 <dialog class="dialog-intro" open style="display:none;">
@@ -35,6 +40,13 @@
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script type="module" src="src/index.js"></script>
+<script>
+    const footerContent = document.querySelector('.footer__content');
+    const date = new Date();
+    const year = date.getFullYear();
+
+    footerContent.textContent += ` ${year} Terra Trivia. All rights reserved`
+</script>
 
 </body>
 </html>

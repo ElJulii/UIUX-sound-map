@@ -7,6 +7,8 @@
 
 body {
     background-color: #aad3df;
+    --letterColor: white;
+    --footerHedearColor: #00000140
 }
 
 /*STYLE FOR PHONE*/
@@ -16,8 +18,8 @@ body {
     width: 100%;
     height: 100dvh;
     display: flex;
-    flex-direction: column;
     position: relative;
+    flex-direction: column;
     container-type: inline-size;
     container-name: main-container;
 }
@@ -73,8 +75,8 @@ h1 {
 /*header*/
 
 .header {
-    color: white;
-    background-color: #0000014D;
+    color: var(--letterColor);
+    background-color: var(--footerHedearColor);
     position: absolute;
     z-index: 2000;
     width: 100dvw;
@@ -124,7 +126,7 @@ h1 {
 .button {
     padding: 8px 16px;
     background-color: #007bff;
-    color: white;
+    color: var(--letterColor);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -150,5 +152,23 @@ h1 {
     z-index: 1000;
     width: 300px;
 }
+
+/*Footer*/
+
+.footer {
+    width: 100%;
+    height: 10dvh;
+    position: absolute;
+    bottom: 0;
+    color: var(--letterColor);
+    background-color: var(--footerHedearColor);
+    padding: 2rem;
+}
+
+.footer__content {
+    text-align: center;
+}
+
+/*End footer*/
 
 /* STYLE FOR PC*/

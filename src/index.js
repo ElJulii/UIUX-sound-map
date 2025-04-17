@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
         const currentZoom = lerp(SMALL_SCREEN.zoom, LARGE_SCREEN.zoom, factor);
 
-        map.setView(currentCenter, currentZoom);
+
+        if(width < 500) map.setView(SMALL_SCREEN.center, SMALL_SCREEN.zoom);
+        else map.setView(currentCenter, currentZoom);
     }
 
     // Configuración inicial y listener para redimensionamiento
