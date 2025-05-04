@@ -56,7 +56,6 @@ body {
     fill: #12572c;
 }
 
-
 /*For PC map*/
 @container main-container (min-width: 501px) {
     .main__map {
@@ -228,6 +227,72 @@ h1 {
     width: 300px;
 }
 
+
+/*Dialog for About*/
+.dialog-about {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100dvh;
+    border: none;
+}
+
+
+.dialog-about__form {
+    position: absolute;
+    display: grid;
+    gap: 10px 2px;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(12, 1fr);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(300px, 90%, 850px);
+}
+
+.button--close-about {
+    position: absolute;
+    top: 5px;
+    right: 70px;
+}
+
+.dialog-about__container-title {
+    grid-column: 2/span 3;
+}
+
+.dialog-about__container-subtitle {
+    grid-column: 1/span 5;
+    grid-row-end: span 3;
+}
+
+.dialog-about__container-creators{
+    grid-column: 1/span 5;
+}
+
+
+.dialog-about__container-name {
+    grid-column: 1/span 3;
+}
+
+.dialog-about__container {
+    border-radius: 50px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.dialog-about__container:not(.dialog-about__container:nth-child(2)) {
+    padding: 10px 0;
+}
+
+.dialog-about__container-subtitle {
+    padding: 50px 70px;
+}
+
+.dialog-about__container:not(.dialog-about__container:nth-child(3)) {
+    background-color: #0019474D;
+}
+
 /*Footer*/
 
 .footer {
@@ -247,6 +312,30 @@ h1 {
 /*End footer*/
 
 /* STYLE FOR PC*/
+
+@media (min-width: 700px) {
+    .dialog-about__form {
+        grid-template-rows: repeat(10, auto);
+        row-gap: 13px;
+    }
+
+    .dialog-about__container:not(.dialog-about__container:nth-child(2)) {
+        padding: 10px;
+    }
+
+    .dialog-about__container-subtitle {
+        grid-row-end: 3;
+        padding: 30px;
+    }
+
+    .dialog-about__container-creators {
+        padding: 0;
+    }
+
+    .dialog-about__container-name {
+        grid-column: 2/span 1;
+    }
+}
 
 
 /* Media Query for Mobile */
