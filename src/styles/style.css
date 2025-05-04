@@ -56,7 +56,6 @@ body {
     fill: #12572c;
 }
 
-
 /*For PC map*/
 @container main-container (min-width: 501px) {
     .main__map {
@@ -74,16 +73,91 @@ h1 {
 
 /*header*/
 
+/* Header Styles */
 .header {
-    color: var(--letterColor);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    padding-left: 150px;
+    padding-right: 150px;
     background-color: var(--footerHedearColor);
-    position: absolute;
-    z-index: 2000;
-    width: 100dvw;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: relative;
+}
 
+/* Logo circle */
+.logo-circle {
+    width: 49px;
+    height: 49px;
+    opacity: 0.5;
+    background: linear-gradient(0deg, rgba(50, 200, 234, 0.8), rgba(50, 200, 234, 0.8)),
+                linear-gradient(0deg, rgba(48, 69, 206, 0.8), rgba(48, 69, 206, 0.8)),
+                linear-gradient(0deg, rgba(45, 103, 190, 0.5), rgba(45, 103, 190, 0.5));
+    box-shadow: 0px 4px 4px 0px rgba(255, 249, 249, 0.25);
+    border-radius: 50%;
+    z-index: 1;
+}
 
+/* Logo text */
+.logo h1 {
+    width: 82px;
+    height: 33px;
+    border-radius: 28px;
+    background: #00064780;
+    margin: 0;
+    position: relative;
+    left: -20px;
+    top: 0;
+    z-index: 2;
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-buttons a {
+    width: 76px;
+    height: 33px;
+    background-color: #6ED4FFCC;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-buttons a span {
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #1f2937;
+}
 /*End Header*/
 
 /*dialog introduction*/
@@ -153,6 +227,72 @@ h1 {
     width: 300px;
 }
 
+
+/*Dialog for About*/
+.dialog-about {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100dvh;
+    border: none;
+}
+
+
+.dialog-about__form {
+    position: absolute;
+    display: grid;
+    gap: 10px 2px;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(12, 1fr);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(300px, 90%, 850px);
+}
+
+.button--close-about {
+    position: absolute;
+    top: 5px;
+    right: 70px;
+}
+
+.dialog-about__container-title {
+    grid-column: 2/span 3;
+}
+
+.dialog-about__container-subtitle {
+    grid-column: 1/span 5;
+    grid-row-end: span 3;
+}
+
+.dialog-about__container-creators{
+    grid-column: 1/span 5;
+}
+
+
+.dialog-about__container-name {
+    grid-column: 1/span 3;
+}
+
+.dialog-about__container {
+    border-radius: 50px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.dialog-about__container:not(.dialog-about__container:nth-child(2)) {
+    padding: 10px 0;
+}
+
+.dialog-about__container-subtitle {
+    padding: 50px 70px;
+}
+
+.dialog-about__container:not(.dialog-about__container:nth-child(3)) {
+    background-color: #0019474D;
+}
+
 /*Footer*/
 
 .footer {
@@ -172,3 +312,73 @@ h1 {
 /*End footer*/
 
 /* STYLE FOR PC*/
+
+@media (min-width: 700px) {
+    .dialog-about__form {
+        grid-template-rows: repeat(10, auto);
+        row-gap: 13px;
+    }
+
+    .dialog-about__container:not(.dialog-about__container:nth-child(2)) {
+        padding: 10px;
+    }
+
+    .dialog-about__container-subtitle {
+        grid-row-end: 3;
+        padding: 30px;
+    }
+
+    .dialog-about__container-creators {
+        padding: 0;
+    }
+
+    .dialog-about__container-name {
+        grid-column: 2/span 1;
+    }
+}
+
+
+/* Media Query for Mobile */
+@media (max-width: 500px) {
+    /* Mobile layout for the header */
+    .header {
+        width: 100%;
+        height: 69px;
+        padding: 0;
+    }
+
+    /* Mobile layout for the entire logo block */
+    .logo {
+        width: 114px;
+        height: 49px;
+        position: absolute;
+        top: 12px;
+        left: 25px;
+    }
+
+    /* Navigation buttons container (Mobile) */
+    .nav-buttons {
+        display: block;
+        gap: 0;
+    }
+
+    /* Navigation buttons (Mobile) */
+    .nav-buttons a {
+        position: absolute;
+        width: 76px;
+        height: 33px;
+        border-radius: 50px;
+    }
+
+    /* Specific positioning for About Us button (Mobile) */
+    .nav-buttons .about {
+        top: 19px;
+        left: 229px;
+    }
+
+    /* Specific positioning for Contact Us button (Mobile) */
+    .nav-buttons .contact {
+        top: 19px;
+        left: 335px;
+    }
+}

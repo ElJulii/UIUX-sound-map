@@ -8,12 +8,28 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
     <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <main class="main">
 
-    <header class="header">This edit the header, It has to has be buttons, icon, etc. Use BEM for name classes</header>
+    <header class="header">
+        <div class="logo">
+          <div class="logo-circle"></div>
+          <h1>Terra Trivia</h1>
+        </div>
+        <nav class="nav-buttons">
+            <a href="#about" class="about">
+                <span>about us</span>
+            </a>
+            <a href="#contact" class="contact">
+                <span>contact us</span>
+            </a>
+        </nav>        
+      </header>
 
     <div class="main__map" id="map"></div>
 
@@ -37,6 +53,83 @@
     </form>
 </dialog>
 
+<dialog class="dialog-about">
+    <form method="dialog" class="dialog-about__form">
+        <div class="dialog-about__container dialog-about__container-title">
+            <p>About Us</p>
+        </div>
+        <div class="dialog-about__container dialog-about__container-subtitle">
+            <p>We believe every country holds a story — and trivia makes it sparkle.</p>
+        </div>
+        <div class="dialog-about__container dialog-about__container-creators">
+            <p>Our coders</p>
+        </div>
+        <div class="dialog-about__container dialog-about__container-name">
+            <p>Maryam Kareem</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>Egypt</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>@maryamk26</p>
+        </div>
+        <div class="dialog-about__container dialog-about__container-name">
+            <p>Radka Nhapulo</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>Mozambique</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>@Radqueen_258</p>
+        </div>
+        <div class="dialog-about__container dialog-about__container-name">
+            <p>Julian Lara</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>Ecuador</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>@ElJulii28</p>
+        </div>
+        <div class="dialog-about__container dialog-about__container-name">
+            <p>Amanda Argotti</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>Ecuador</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>@creoqueamyyy</p>
+        </div>
+        <div class="dialog-about__container dialog-about__container-name">
+            <p>Camilo Duran</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>Colombia</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>@RevengeDev</p>
+        </div>
+        <div class="dialog-about__container dialog-about__container-name">
+            <p>Jéssica Chiponde</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>Mozambique</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>@jeykey113</p>
+        </div>
+        <div class="dialog-about__container dialog-about__container-name">
+            <p>Albaraa Shagat</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>Egypt</p>
+        </div>
+        <div class="dialog-about__container">
+            <p>@barbarisme9</p>
+        </div>
+        <button class="button button--close-about">X</button>
+    </form>
+</dialog>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script type="module" src="src/index.js"></script>
@@ -47,6 +140,6 @@
 
     footerContent.textContent += ` ${year} Terra Trivia. All rights reserved`
 </script>
-
+<script src="src/scripts/script-about.js"></script>
 </body>
 </html>
