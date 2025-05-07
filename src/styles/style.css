@@ -180,7 +180,7 @@ h1 {
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 40px;
     text-align: center;
 }
 
@@ -196,7 +196,7 @@ h1 {
 }
 
 .dialog-intro__form p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .dialog-intro__cont-text p:first-child {
@@ -353,7 +353,21 @@ h1, .dialog-intro__form {
 
 /* STYLE FOR PC*/
 
-@media (min-width: 700px) {
+@media screen and (min-width: 1010px) {
+    /*Dialog Intro or Explore*/
+
+    .dialog-intro__form {
+        gap: 3em;
+    }
+
+    .dialog-intro__form p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    /*Dialog about*/
     .dialog-about__form {
         grid-template-rows: repeat(10, auto);
         row-gap: 13px;
