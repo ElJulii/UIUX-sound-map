@@ -112,7 +112,7 @@ h1 {
 }
 
 /* Logo text */
-.logo h1 {
+.logo p {
     width: 82px;
     height: 33px;
     border-radius: 28px;
@@ -173,16 +173,56 @@ h1 {
 }
 
 .dialog-intro__form {
-    border: solid 2px black;
-    width: 20%;
-    min-width: 300px;
-    position: absolute;
+    width: clamp(400px, 50%, 900px);
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    text-align: center;
 }
 
-/*dialog introduction*/
+.dialog-intro__form p, h1,  .dialog-intro__form button{
+    font-family: Inknut Antiqua, sans-serif;
+}
+
+.dialog-intro__cont-text {
+    border-radius: 50px;
+    background-color: #28139C4D;
+    opacity: 75%;
+    padding: 20px 30px;
+}
+
+.dialog-intro__form p {
+    font-size: 0.8rem;
+}
+
+.dialog-intro__cont-text p:first-child {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+h1, .dialog-intro__form {
+    color: var(--letterColor);
+}
+
+.dialog-intro__form button {
+    max-width: 200px;
+    align-self: center;
+    color: #000;
+    background-color: #28139C4D;
+    border-radius: 30px;
+    padding: 3px 30px;
+    text-align: center;
+}
+
+/*End dialog introduction*/
 
 /*Country description*/
 .section-country-info__country-flag {
