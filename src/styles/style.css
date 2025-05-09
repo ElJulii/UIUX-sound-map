@@ -333,6 +333,121 @@ h1, .dialog-intro__form {
     background-color: #0019474D;
 }
 
+/* Dialog contact us */
+
+.dialog-contact {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: transparent;
+    font-family: Inknut Antiqua, sans-serif;
+    container-type: inline-size;
+    container-name: diaContact;
+}
+
+.dialog-contact__form, .dialog-contact__container--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dialog-contact__form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 2rem;
+    color: var(--letterColor);
+}
+
+.dialog-contact__container--blue {
+    background-color: #28139C4D;
+}
+
+
+.dialog-contact__container--title {
+    width: clamp(300px, 60%, 400px);
+    border-radius: 50px;
+    padding: 15px 0;
+    font-size: 0.8em;
+}
+
+.dialog-contact__container--text {
+    width: clamp(350px, 90%, 800px);
+    gap: 20px;
+    font-size: 0.8em;
+}
+
+.dialog-contact__container--text label, .dialog-contact__container--text textarea {
+    border-radius: 50px;
+}
+
+.dialog-contact__container--text label {
+    padding: 10px 30px;
+}
+
+.dialog-contact__container--text textarea {
+    padding: 30px;
+    width: clamp(350px, 90%, 500px);
+    text-align: center;
+    resize: none;
+    outline: none;
+    color: var(--letterColor);
+}
+
+.dialog-contact__container--text textarea::placeholder {
+    color: var(--letterColor);
+}
+
+.dialog-contact .button--send {
+    background-color: #ACACAC80;
+    color: var(--letterColor);
+    border: none;
+    padding: 8px 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.dialog-contact .button--send:hover {
+    background-color: #ACACAC
+}
+
+.button--close {
+    border: solid 1px;
+    border-radius: 50px;
+    background-color: #ACACAC;
+}
+
+.dialog-contact__form button:last-child{
+    top: 20px;
+    right: 1%;
+}
+
+@container diaContact (min-width: 600px) {
+    .dialog-contact__container--text {
+        font-size: 0.9em;
+    }
+
+    .dialog-contact__container--title {
+        font-size: 1.1em;
+    }
+}
+
+@container diaContact (min-width: 500px) {
+    .dialog-contact__form button:last-child{
+        right: 10%;
+    }
+}
+
+@container diaContact (min-width: 1000px) {
+    .dialog-contact__form button:last-child{
+        right: 25%;
+    }
+}
 /*Footer*/
 
 .footer {
