@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     background-color: #aad3df;
     --letterColor: white;
@@ -109,6 +108,7 @@ h1 {
     box-shadow: 0px 4px 4px 0px rgba(255, 249, 249, 0.25);
     border-radius: 50%;
     z-index: 1;
+    border: 1px solid black;
 }
 
 /* Logo text */
@@ -544,12 +544,33 @@ h1, .dialog-intro__form {
 
     /* Mobile layout for the entire logo block */
     .logo {
-        width: 114px;
-        height: 49px;
+        width: 180px;
+        height: 60px;
         position: absolute;
-        top: 12px;
+        top: 5px;
         left: 25px;
     }
+
+    /* Mobile layout for the logo circle */
+    .logo-circle {
+        width: 49px;
+        height: 49px;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        opacity: 0.5;
+    }
+
+    /* Mobile layout for the logo text (h1) */
+    .logo h1 {
+        width: 81.28070068359375px;
+        height: 27.612245559692383px;
+        position: absolute;
+        top: 16px;
+        left: 30px;
+        line-height: 1;
+    }
+
 
     /* Navigation buttons container (Mobile) */
     .nav-buttons {
