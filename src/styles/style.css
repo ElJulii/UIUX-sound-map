@@ -463,6 +463,8 @@ h1, .dialog-intro__form {
     font-family: Inknut Antiqua, sans-serif;
     font-size: 0.8em;
     pointer-events: none;
+    opacity: 1; /* Inicia completamente visible */
+    transition: opacity 7s ease-in-out; /* Duración de 3 segundos */
 }
 
 
