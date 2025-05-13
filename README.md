@@ -69,6 +69,7 @@ cd UIUX-sound-map
 
 ## 📁 Project Structure
 
+```perl
 UIUX-sound-map/
 
 ├── index.html
