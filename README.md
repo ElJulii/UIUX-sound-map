@@ -57,12 +57,16 @@ Just choose a country — and let the journey begin.
 
 ## 🚀  How to Run the Project
 1. Clone the repository:
+   
    ```bash
    git clone https://github.com/your-username/UIUX-sound-map.git
 cd UIUX-sound-map
+
 2.   Open the index.html file directly in your browser
+   
   💡 No local server required — this is a fully static project!
-3. Click on the map and start exploring the world! 🗺️
+  
+4. Click on the map and start exploring the world! 🗺️
 
 ## 📁 Project Structure
 
