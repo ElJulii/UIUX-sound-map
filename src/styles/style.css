@@ -452,6 +452,7 @@ h1, .dialog-intro__form {
 /* Central message */
 
 .message {
+    display: none;
     margin: 30% auto;
     width: clamp(300px, 85%, 500px);
     background-color: #969A994D;
@@ -463,8 +464,8 @@ h1, .dialog-intro__form {
     font-family: Inknut Antiqua, sans-serif;
     font-size: 0.8em;
     pointer-events: none;
-    opacity: 1; /* Inicia completamente visible */
-    transition: opacity 7s ease-in-out; /* Duración de 3 segundos */
+    opacity: 1;
+    transition: opacity 7s ease-in-out;
 }
 
 

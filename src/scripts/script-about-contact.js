@@ -12,14 +12,6 @@ const country = document.querySelector('.section-country-info');
 //Central message
 const centralMessage = document.querySelector('.message');
 
-setTimeout(() => {
-    centralMessage.style.opacity = '0'
-}, 0)
-
-setTimeout(() => {
-    centralMessage.style.display = 'none'
-}, 8000)
-
 buttonAbout.addEventListener('click', (e) => {
     e.preventDefault();
 
