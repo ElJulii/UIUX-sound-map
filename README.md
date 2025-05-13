@@ -1,35 +1,34 @@
 # 🌍 TERRA TRIVIA - UI/UX Sound Map
 
-**Terra Trivia** is an interactive web-based experience that combines map navigation and trivia questions, offering users a fun and educational journey through global landmarks, sounds, or cultural facts.
-
-### Ever wondered what makes each country truly unique?  
-
-With **Terra Trivia**, you don’t need to plan a trip — just pick a country and we’ll take you on a galactic journey through:
-
-✨ **Interesting Facts** – Discover hidden gems and fascinating details  
-
-🧳 **Tourism Tips** – Know where to go, what to see, and how to experience it like a local  
-
-🎉 **Fun & Random Trivia** – The quirky, weird, and wonderful things that make each place special  
-
-All wrapped in a **space-inspired interface**, because Earth is our favorite planet in the galaxy 🪐  
-Just choose a country — and let the journey begin.
+**Terra Trivia** — это интерактивный веб-проект, который позволяет исследовать страны мира через факты, изображения и культурные особенности — в стиле галактического путешествия.
 
 ---
 
-## 🚀 Key Features
+### ✨ Задумывались ли вы когда-нибудь, что делает каждую страну по-настоящему уникальной?
 
-- 🌐 Interactive world map
-- 🔍 Click on any country directly on the map
-- 📄 Display of:
-  - Country name
-  - National flag
-  - Top 3 tourist attractions with images and brief descriptions
-- ✨ Space-themed and responsive interface
+С **Terra Trivia** вам не нужно планировать поездку — просто выберите страну, и мы отправим вас в космическое путешествие, наполненное:
+
+- 🌟 **Интересными фактами** – Откройте для себя малоизвестные и увлекательные детали  
+- 🧭 **Туристическими советами** – Узнайте, куда стоит пойти, что посмотреть и как почувствовать себя местным жителем  
+- 🎉 **Забавной и случайной информацией** – Странности, курьёзы и прелести каждой страны  
+
+Всё это в оформлении, вдохновлённом космосом, ведь Земля — наша любимая планета во всей галактике 🪐  
+Просто выберите страну — и начнётся ваше путешествие.
 
 ---
 
-## 🛠️ Technologies Used
+## 🚀 Основные возможности
+
+- 🌐 Интерактивная карта мира  
+- 🔍 Возможность кликнуть по любой стране  
+- 📄 Отображение:
+  - Названия страны  
+  - Национального флага  
+  - Топ-3 достопримечательностей с изображениями и кратким описанием  
+- ✨ Интерфейс в космическом стиле и адаптивный дизайн
+---
+
+## 🛠️ Используемые технологии
 
 <div align="left">
 
@@ -40,27 +39,28 @@ Just choose a country — and let the journey begin.
 
 </div>
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Lightweight Backend (simulated):** Static JSON + AJAX requests
-- **Interactive Maps:** Leaflet.js
-- **Flags:** flag-icon-css
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)  
+- **Условный Backend:** JSON + AJAX-запросы  
+- **Интерактивная карта:** Leaflet.js  
+- **Флаги стран:** flag-icon-css
 
 ---
 
-## 🚀  How to Run the Project
-1. Clone the repository:
+## ⚙️ Как запустить проект
+1. Клонируйте репозиторий:
    
    ```bash
    git clone https://github.com/your-username/UIUX-sound-map.git
 cd UIUX-sound-map
 
-**2.**   Open the index.html file directly in your browser
+**2.**   Откройте файл ```index.html в браузере:
    
-  💡 No local server required — this is a fully static project!
+  💡 Локальный сервер не требуется — проект полностью статический!
   
-**3.**   Click on the map and start exploring the world! 🗺️
+**3.**    Кликните на карте и начните исследовать мир! 🗺️
 
-## 📁 Project Structure
+---
+## 📁 Структура проекта
 
 UIUX-sound-map/
 
@@ -81,57 +81,58 @@ UIUX-sound-map/
 
  ---
 
-## 💡 Future Enhancements
+## 💡 Будущие улучшения
 
-🌍 Search by country name
+🌍 Поиск по названию страны
 
-🌐 Multilingual support
+🌐 Многоязычная поддержка
 
-🔄 Integration with real-world geographic APIs
+🔄 Интеграция с реальными географическими API
 
-📱 Enhanced mobile-first design
+📱 Улучшенный мобильный дизайн
 
----
-
-## 👥 Team & Contributions
-
-**Design:** Amanda Argotti.
-
-**Frontend Development:** Julian Lara, Maryam Kareem.
-
-**Backend Development:** Radka Nhapulo, Camilo Duran, Albaraa Shagat.
-
-**README Documentation:** Jéssica Chiponde.
 
 ---
 
-## 🧩 Contribution Guidelines
-If you’d like to contribute:
+## 👥 Команда и вклад
 
-**1.** Fork the repository
+**Дизайн:** Арготти Аманда.
 
-**2.** Create a new branch (git checkout -b feature-name)
+**Frontend-разработка:** Лара Хулиан, Ахмед Марьям.
 
-**3.** Commit your changes (git commit -m 'Add feature')
+**Backend-разработка:** Ньяпуло Радка, Дуран Камило, Шагат Албараа.
 
-**4.** Push to the branch (git push origin feature-name)
-
-**5.** Open a pull request
+**Документация (README):** Шипонде Жессика.
 
 ---
 
-## 🌐 Deployment
+## 🧩 Руководство по вкладу в проект
+Если вы хотите внести вклад:
+
+**1.** Форкните репозиторий
+
+**2.** Создайте новую ветку: ```bash (git checkout -b feature-name)
+
+**3.** Зафиксируйте изменения: ```bash git commit -m "Добавлена новая функция"
+
+**4.** Отправьте изменения: ```bash (git push origin feature-name)
+
+**5.** Откройте Pull Request
+
+---
+
+## 🌐 Развёртывание
 
 This app can be deployed on platforms like:
 
--  GitHub Pages: Just publish the repository’s root (where **index.html** is located)
+-  **GitHub Pages**: просто опубликуйте корень репозитория (где находится 
+   **index.html** )
 
--  Netlify or Vercel: Drag and drop the project folder or link the       
-   repository
+-  **Netlify** или **Vercel**: загрузите папку проекта или подключите репозиторий
    
 --- 
 
-## 📜 License
+## 📜 Лицензия
 
 © 2025 Terra Trivia. All rights reserved.
 
