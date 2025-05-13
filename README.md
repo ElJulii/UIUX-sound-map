@@ -17,13 +17,6 @@ Just choose a country — and let the journey begin.
 
 ---
 
-## 📸 Preview
-
-![Terra Trivia Preview](./terra.trivia)
-
-
----
-
 ## 🚀 Key Features
 
 - 🌐 Interactive world map
