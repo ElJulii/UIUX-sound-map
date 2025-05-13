@@ -19,7 +19,7 @@ Just choose a country — and let the journey begin.
 
 ## 📸 Preview
 
-![Terra Trivia Preview](./img/screenshot.png)
+![Terra Trivia Preview](./terra.trivia)
 
 
 ---
