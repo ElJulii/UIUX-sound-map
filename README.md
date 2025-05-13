@@ -1,11 +1,15 @@
 # 🌍 TERRA TRIVIA - UI/UX Sound Map
+
 **Terra Trivia** is an interactive web-based experience that combines map navigation and trivia questions, offering users a fun and educational journey through global landmarks, sounds, or cultural facts.
 
 ### Ever wondered what makes each country truly unique?  
+
 With **Terra Trivia**, you don’t need to plan a trip — just pick a country and we’ll take you on a galactic journey through:
 
 ✨ **Interesting Facts** – Discover hidden gems and fascinating details  
+
 🧳 **Tourism Tips** – Know where to go, what to see, and how to experience it like a local  
+
 🎉 **Fun & Random Trivia** – The quirky, weird, and wonderful things that make each place special  
 
 All wrapped in a **space-inspired interface**, because Earth is our favorite planet in the galaxy 🪐  
@@ -15,7 +19,7 @@ Just choose a country — and let the journey begin.
 
 ## 📸 Preview
 
-![Terra Trivia Preview](./screenshot.png)
+![Terra Trivia Preview](./img/screenshot.png)
 
 
 ---
@@ -61,24 +65,40 @@ cd UIUX-sound-map
 3. Click on the map and start exploring the world! 🗺️
 
 ## 📁 Project Structure
+
 UIUX-sound-map/
+
 ├── index.html
+
 ├── src/
+
 │   └── styles/
+
 │       └── style.css
+
 ├── .idea/                 # IDE configuration files
+
 ├── package.json           # (Optional) Project metadata
+
 └── README.md
 
-   
 
-💡 **Future Enhancements**
+ ---
+
+## 💡 Future Enhancements
+
 🌍 Search by country name
+
 🌐 Multilingual support
+
 🔄 Integration with real-world geographic APIs
+
 📱 Enhanced mobile-first design
 
-👥 **Team & Contributions**
+---
+
+## 👥 Team & Contributions
+
 **Design:** Amanda Argotti.
 
 **Frontend Development:** Julian Lara, Maryam Kareem.
@@ -87,23 +107,36 @@ UIUX-sound-map/
 
 **README Documentation:** Jéssica Chiponde.
 
+---
 
-🧩 **Contribution Guidelines**
+## 🧩 Contribution Guidelines
 If you’d like to contribute:
+
 **1.** Fork the repository
+
 **2.** Create a new branch (git checkout -b feature-name)
+
 **3.** Commit your changes (git commit -m 'Add feature')
+
 **4.** Push to the branch (git push origin feature-name)
+
 **5.** Open a pull request
 
+---
+
 ## 🌐 Deployment
+
 This app can be deployed on platforms like:
+
 -  GitHub Pages: Just publish the repository’s root (where **index.html** is located)
 
 -  Netlify or Vercel: Drag and drop the project folder or link the       
    repository
+   
+--- 
 
-📜 **License**
+## 📜 License
+
 © 2025 Terra Trivia. All rights reserved.
 
 
