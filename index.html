@@ -146,6 +146,24 @@
     </form>
 </dialog>
 
+<!--ALERT MESSAGE FOR THE MESSAGE SENT IN "CONTACT US"-->
+<div id="popup-message" style="
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #323232;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  font-size: 16px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+"></div>
+
 <dialog class="dialog-contact">
     <form method="dialog" class="dialog-contact__form">
         <div class="dialog-contact__container--title dialog-contact__container--blue">
