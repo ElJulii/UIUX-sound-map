@@ -163,8 +163,9 @@ h1 {
 /*dialog introduction*/
 
 .dialog-intro {
+    margin-top: 20%;
     width: 100%;
-    height: 100dvh;
+    height: 80dvh;
     position: absolute;
     background-color: transparent;
     top: 0;
@@ -490,6 +491,11 @@ h1, .dialog-intro__form {
 /* STYLE FOR PC*/
 
 @media screen and (min-width: 500px) {
+    .dialog-intro {
+        margin-top: 7%;
+        height: 80dvh;
+    }
+
     .message {
         margin: 575px  auto;
     }
