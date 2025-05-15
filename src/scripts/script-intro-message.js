@@ -1,9 +1,9 @@
 //Dialog intro
 const dialogIntro = document.querySelector('.dialog-intro');
 //Button dialog intro EXPLORE
-const button = document.querySelector('.button--intro');
+const buttonIntro = document.querySelector('.button--intro');
 
-button.addEventListener('click', (e) => {
+buttonIntro.addEventListener('click', (e) => {
     e.preventDefault();
 
     centralMessage.style.display = 'block';

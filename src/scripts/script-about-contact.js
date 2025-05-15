@@ -18,6 +18,7 @@ buttonAbout.addEventListener('click', (e) => {
     country.style.display = 'none';
     dialogContact.open = false;
     dialogAbout.open = true;
+    dialogIntro.open = false;
 
     centralMessage.style.display = 'none'
 
@@ -29,6 +30,7 @@ buttonContact.addEventListener('click', (e) => {
     country.style.display = 'none';
     dialogAbout.open = false;
     dialogContact.open = true;
+    dialogIntro.open = false;
 
     centralMessage.style.display = 'none'
 
