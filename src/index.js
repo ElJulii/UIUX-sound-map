@@ -919,4 +919,3 @@ document.addEventListener('DOMContentLoaded', () => {
             }).addTo(map);
         });
 });
-

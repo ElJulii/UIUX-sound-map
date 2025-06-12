@@ -541,25 +541,184 @@ h1, .dialog-intro__form {
 
 
 @media (max-width: 500px) {
-    /* Mobile layout for the header */
-    .header {
-        /* width: 100%; /* Keep 100% width for responsiveness */
-        height: 69px; /* Matches Figma */
-        padding: 0;
-        /* position: fixed; top: 0; left: 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; */ /* Keep general header styles */
-    }
-
-    /* Mobile layout for the entire logo block */
-    .logo {
-        width: 114px; /* Adjusted to Figma width */
-        height: 49px; /* Adjusted to Figma height */
+     .dialog-about__container-title {
         position: absolute;
-        top: 12px; /* Adjusted to Figma top */
-        left: 25px; /* Matches Figma */
-        /* remove border-width and border from here unless the block itself has a visible border in Figma */
+        width: 249px;
+        height: 57px;
+        top: 128px;
+        left: 85px;
+        opacity: 0.75;
+        border-radius: 50px;
+        grid-column: unset;
+        grid-row: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        background-color: #0019474D;
+        font-family: 'Inknut Antiqua', serif;
     }
 
-    /* Mobile layout for the logo circle */
+    /* Styles for the title text */
+    .dialog-about__container-title p {
+        width: 111px;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        box-sizing: border-box;
+        font-family: inherit;
+    }
+
+    .dialog-about__container-subtitle {
+        position: absolute;
+        width: 386px;
+        height: 146px;
+        top: 204px;
+        left: 16px;
+        opacity: 0.75;
+        border-radius: 50px;
+        grid-column: unset;
+        grid-row: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #28139C4D;
+        font-family: 'Inknut Antiqua', serif;
+    }
+
+    /* Styles for the subtitle text */
+    .dialog-about__container-subtitle p {
+        width: 301px;
+        height: 77px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 250%;
+        text-align: center;
+        color: inherit;
+        margin: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0;
+        padding-right: 0;
+        box-sizing: border-box;
+        font-family: inherit;
+    }
+
+    .dialog-about__container-creators {
+        position: absolute;
+        width: 317px;
+        height: 34px;
+        top: 362px;
+        left: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inknut Antiqua', serif;
+     }
+
+    /* Styles for the creators text */
+    .dialog-about__container-creators p {
+        width: 317px;
+        height: 34px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        box-sizing: border-box;
+        font-family: inherit;
+    }
+
+    /* Adjusting form padding and grid for list items */
+    .dialog-about__form {
+        padding-top: 388px;
+        padding-left: 6px;
+        padding-right: 6px;
+        grid-template-columns: 190px 112px 112px;
+        column-gap: 1px;
+        row-gap: 10px;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 86%;
+        box-sizing: border-box;
+        grid-template-rows: unset;
+        grid-template-areas: unset;
+        display: grid;
+        align-items: start;
+        overflow-x: auto;
+        position: relative;
+        font-family: 'Inknut Antiqua', serif;
+    }
+
+    /* Styles for all list item containers */
+    .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators) {
+        opacity: 0.75;
+        border-radius: 50px;
+        height: 46px;
+        grid-column: auto / span 1;
+        grid-row: auto / span 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 5px;
+        margin: 0;
+        background-color: #0019474D;
+        width: auto;
+        font-family: inherit;
+    }
+
+    /* Base text styles for list items */
+    .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators) p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: 0;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        font-family: inherit;
+    }
+
+    /* Font size override for Handle text */
+    .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators):nth-of-type(3n+3) p {
+        font-size: 10px;
+    }
+
+    /* Specific styles for the Name container */
+    .dialog-about__container-name {
+        grid-column: auto / span 1;
+    }
+
+    /* Header styles for mobile */
+    .header {
+        height: 69px;
+        padding: 0;
+    }
+
+    /* Mobile logo block */
+    .logo {
+        width: 114px;
+        height: 49px;
+        position: absolute;
+        top: 12px;
+        left: 25px;
+    }
+
+    /* Mobile logo circle */
     .logo-circle {
         width: 49px;
         height: 49px;
@@ -567,7 +726,7 @@ h1, .dialog-intro__form {
         opacity: 0.5;
     }
 
-    /* Mobile layout for the logo text */
+    /* Mobile logo text */
     .logo p {
         width: 82px;
         height: 33px;
@@ -579,13 +738,13 @@ h1, .dialog-intro__form {
     }
 
 
-    /* Navigation buttons container (Mobile) */
+    /* Mobile navigation buttons container */
     .nav-buttons {
         display: block;
         gap: 0;
     }
 
-    /* Navigation buttons (Mobile) */
+    /* Mobile navigation buttons */
     .nav-buttons a {
         position: absolute;
         width: 76px;
@@ -593,15 +752,21 @@ h1, .dialog-intro__form {
         border-radius: 50px;
     }
 
-    /* Specific positioning for About Us button (Mobile) */
+    /* Positioning for the About Us button */
     .nav-buttons .about {
         top: 19px;
         left: 229px;
     }
 
-    /* Specific positioning for Contact Us button (Mobile) */
+    /* Positioning for the Contact Us button */
     .nav-buttons .contact {
         top: 19px;
         left: 335px;
+    }
+
+    /* Mobile footer styles */
+    .footer {
+        height: 67px;
+        padding: 1rem 2rem;
     }
 }
