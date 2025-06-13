@@ -292,12 +292,6 @@ h1, .dialog-intro__form {
     width: clamp(300px, 90%, 850px);
 }
 
-.button--close-about {
-    position: absolute;
-    top: 5px;
-    right: 70px;
-}
-
 .dialog-about__container-title {
     grid-column: 2/span 3;
 }
@@ -417,12 +411,6 @@ h1, .dialog-intro__form {
     background-color: #ACACAC
 }
 
-.button--close {
-    border: solid 1px;
-    border-radius: 50px;
-    background-color: #ACACAC;
-}
-
 .dialog-contact__form button:last-child{
     top: 20px;
     right: 1%;
@@ -467,6 +455,24 @@ h1, .dialog-intro__form {
     pointer-events: none;
     opacity: 1;
     transition: opacity 7s ease-in-out;
+}
+
+/* ALERT MESSAGE FOR THE MESSAGE SENT IN "CONTACT US" */
+#popup-message {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #323232;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    font-size: 16px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 
@@ -769,22 +775,4 @@ h1, .dialog-intro__form {
         height: 67px;
         padding: 1rem 2rem;
     }
-}
-
-/*ALERT MESSAGE FOR THE MESSAGE SENT IN "CONTACT US"*/
-#popup-message {
-  display: none;
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #323232;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  font-size: 16px;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }

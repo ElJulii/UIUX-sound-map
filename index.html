@@ -9,161 +9,162 @@
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <main class="main">
+    <div id="main-content-container">
+        <header class="header">
+            <div class="logo">
+              <div class="logo-circle"></div>
+              <p>Terra Trivia</p>
+            </div>
+            <nav class="nav-buttons">
+                <a href="#about" class="about">
+                    <span>about us</span>
+                </a>
+                <a href="#contact" class="contact">
+                    <span>contact us</span>
+                </a>
+            </nav>        
+        </header>
 
-    <header class="header">
-        <div class="logo">
-          <div class="logo-circle"></div>
-          <p>Terra Trivia</p>
+        <div class="main__map" id="map"></div>
+
+        <section class="section-country-info" id="country-info">
+            <h2 class="section-country-info__h2" id="country-name"></h2>
+            <div id="country-flag" class="section-country-info__country-flag"></div>
+            <p class="section-country-info__country-description" id="country-description"></p>
+            <button class="button" id="explore-more-btn" >Explore More</button>
+        </section>
+
+        <div class="message">
+            <p class="message__text">Because sometimes... the best journeys start with a single click</p>
         </div>
-        <nav class="nav-buttons">
-            <a href="#about" class="about">
-                <span>about us</span>
-            </a>
-            <a href="#contact" class="contact">
-                <span>contact us</span>
-            </a>
-        </nav>        
-      </header>
 
-    <div class="main__map" id="map"></div>
-
-    <section class="section-country-info" id="country-info">
-        <h2 class="section-country-info__h2" id="country-name"></h2>
-        <div id="country-flag" class="section-country-info__country-flag"></div>
-        <p class="section-country-info__country-description" id="country-description"></p>
-        <button class="button" id="explore-more-btn" >Explore More</button>
-    </section>
-
-    <div class="message">
-        <p class="message__text">Because sometimes... the best journeys start with a single click</p>
+        <footer class="footer">
+            <p class="footer__content">&copy;</p>
+        </footer>
     </div>
 
-    <footer class="footer">
-        <p class="footer__content">&copy;</p>
-    </footer>
+    <dialog class="dialog-intro" open>
+        <form method="dialog" class="dialog-intro__form">
+            <h1 class="dialog-intro__h1">Welcome to Terra Trivia</h1>
+            <div class="dialog-intro__cont-text">
+                <p>Explore the World Through Curiosity</p>
+                <p> Ever wondered what makes each country
+                    truly unique? With Terra Trivia, you don’t need to plan a trip — just pick a country,
+                    and we’ll take you on a journey filled with: Interesting Facts– Discover hidden gems
+                    and fascinating details Tourism Tips – Know where to go, what to see, and how to experience
+                    it like a local Fun & Random Trivia – The quirky, weird, and wonderful things
+                    that make each place special All wrapped in a space-inspired interface, because Earth
+                    is our favorite planet in the galaxy 🌌 🗺️ Just choose a country — and let the journey begin.
+                </p>
+            </div>
+
+            <button class="button button--intro">Explore</button>
+        </form>
+    </dialog>
+
+    <dialog class="dialog-about">
+        <form method="dialog" class="dialog-about__form">
+            <div class="dialog-about__container dialog-about__container-title">
+                <p>About Us</p>
+            </div>
+            <div class="dialog-about__container dialog-about__container-subtitle">
+                <p>We believe every country holds a story — and trivia makes it sparkle.</p>
+            </div>
+            <div class="dialog-about__container dialog-about__container-creators">
+                <p>the creators</p>
+            </div>
+            <div class="dialog-about__container dialog-about__container-name">
+                <p>Maryam Kareem</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>Egypt</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>@maryamk26</p>
+            </div>
+            <div class="dialog-about__container dialog-about__container-name">
+                <p>Radka Nhapulo</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>Mozambique</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>@Radqueen_258</p>
+            </div>
+            <div class="dialog-about__container dialog-about__container-name">
+                <p>Julian Lara</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>Ecuador</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>@ElJulii28</p>
+            </div>
+            <div class="dialog-about__container dialog-about__container-name">
+                <p>Amanda Argotti</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>Ecuador</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>@creoqueamyyy</p>
+            </div>
+            <div class="dialog-about__container dialog-about__container-name">
+                <p>Camilo Duran</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>Colombia</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>@RevengeDev</p>
+            </div>
+            <div class="dialog-about__container dialog-about__container-name">
+                <p>Jéssica Chiponde</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>Mozambique</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>@jeykey113</p>
+            </div>
+            <div class="dialog-about__container dialog-about__container-name">
+                <p>Albaraa Shagat</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>Egypt</p>
+            </div>
+            <div class="dialog-about__container">
+                <p>@barbarisme9</p>
+            </div>
+        </form>
+    </dialog>
+
+    <div id="popup-message"></div>
+
+    <dialog class="dialog-contact">
+        <form method="dialog" class="dialog-contact__form">
+            <div class="dialog-contact__container--title dialog-contact__container--blue">
+                <h2 class="dialog-contact__title">Contact us</h2>
+            </div>
+            <div class="dialog-contact__container--text">
+                <label for="com-user" class="dialog-contact__container--blue">
+                    Got a question? A fun fact to share? Or just want to say hi? We’d love to hear
+                    from you! Whether you're a curious traveler, trivia lover, or fellow space
+                    explorer — drop us a message, and we'll orbit back to you as soon as possible.
+                    use the form below to send us a message directly from Earth. Let’s connect — your
+                    voice makes this universe brighter.
+                </label>
+                <textarea id="com-user" placeholder="write here" class="dialog-contact__container--blue" maxlength="90"></textarea>
+            </div>
+            <button type="button" class="button--send">Send</button>
+        </form>
+    </dialog>
 </main>
-
-<dialog class="dialog-intro" open>
-    <form method="dialog" class="dialog-intro__form">
-        <h1 class="dialog-intro__h1">Welcome to Terra Trivia</h1>
-        <div class="dialog-intro__cont-text">
-            <p>Explore the World Through Curiosity</p>
-            <p> Ever wondered what makes each country
-                truly unique? With Terra Trivia, you don’t need to plan a trip — just pick a country,
-                and we’ll take you on a journey filled with: Interesting Facts– Discover hidden gems
-                and fascinating details Tourism Tips – Know where to go, what to see, and how to experience
-                it like a local Fun & Random Trivia – The quirky, weird, and wonderful things
-                that make each place special All wrapped in a space-inspired interface, because Earth
-                is our favorite planet in the galaxy 🌌 🗺️ Just choose a country — and let the journey begin.
-            </p>
-        </div>
-
-        <button class="button button--intro">Explore</button>
-    </form>
-</dialog>
-
-<dialog class="dialog-about">
-    <form method="dialog" class="dialog-about__form">
-        <div class="dialog-about__container dialog-about__container-title">
-            <p>About Us</p>
-        </div>
-        <div class="dialog-about__container dialog-about__container-subtitle">
-            <p>We believe every country holds a story — and trivia makes it sparkle.</p>
-        </div>
-        <div class="dialog-about__container dialog-about__container-creators">
-            <p>the creators</p>
-        </div>
-        <div class="dialog-about__container dialog-about__container-name">
-            <p>Maryam Kareem</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>Egypt</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>@maryamk26</p>
-        </div>
-        <div class="dialog-about__container dialog-about__container-name">
-            <p>Radka Nhapulo</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>Mozambique</p>
-        </div>
-        <div class="dialog_about__container">
-            <p>@Radqueen_258</p>
-        </div>
-        <div class="dialog-about__container dialog-about__container-name">
-            <p>Julian Lara</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>Ecuador</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>@ElJulii28</p>
-        </div>
-        <div class="dialog-about__container dialog-about__container-name">
-            <p>Amanda Argotti</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>Ecuador</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>@creoqueamyyy</p>
-        </div>
-        <div class="dialog-about__container dialog-about__container-name">
-            <p>Camilo Duran</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>Colombia</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>@RevengeDev</p>
-        </div>
-        <div class="dialog-about__container dialog-about__container-name">
-            <p>Jéssica Chiponde</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>Mozambique</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>@jeykey113</p>
-        </div>
-        <div class="dialog-about__container dialog-about__container-name">
-            <p>Albaraa Shagat</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>Egypt</p>
-        </div>
-        <div class="dialog-about__container">
-            <p>@barbarisme9</p>
-        </div>
-    </form>
-</dialog>
-
-<div id="popup-message"></div>
-
-<dialog class="dialog-contact">
-    <form method="dialog" class="dialog-contact__form">
-        <div class="dialog-contact__container--title dialog-contact__container--blue">
-            <h2 class="dialog-contact__title">Contact us</h2>
-        </div>
-        <div class="dialog-contact__container--text">
-            <label for="com-user" class="dialog-contact__container--blue">
-                Got a question? A fun fact to share? Or just want to say hi? We’d love to hear
-                from you! Whether you're a curious traveler, trivia lover, or fellow space
-                explorer — drop us a message, and we'll orbit back to you as soon as possible.
-                use the form below to send us a message directly from Earth. Let’s connect — your
-                voice makes this universe brighter.
-            </label>
-            <textarea id="com-user" placeholder="write here" class="dialog-contact__container--blue" maxlength="90"></textarea>
-        </div>
-        <button type="button" class="button--send">Send</button>
-    </form>
-</dialog>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script type="module" src="src/index.js"></script>
