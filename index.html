@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
     <title>Terra Trivia</title>
-    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
     <link rel="stylesheet" href="src/styles/style.css">
@@ -94,7 +93,7 @@
         <div class="dialog-about__container">
             <p>Mozambique</p>
         </div>
-        <div class="dialog-about__container">
+        <div class="dialog_about__container">
             <p>@Radqueen_258</p>
         </div>
         <div class="dialog-about__container dialog-about__container-name">
@@ -145,23 +144,7 @@
     </form>
 </dialog>
 
-<!--ALERT MESSAGE FOR THE MESSAGE SENT IN "CONTACT US"-->
-<div id="popup-message" style="
-  display: none;
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #323232;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  font-size: 16px;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-"></div>
+<div id="popup-message"></div>
 
 <dialog class="dialog-contact">
     <form method="dialog" class="dialog-contact__form">
@@ -184,15 +167,9 @@
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script type="module" src="src/index.js"></script>
-<script>
-    const footerContent = document.querySelector('.footer__content');
-    const date = new Date();
-    const year = date.getFullYear();
-
-    footerContent.textContent += ` ${year} Terra Trivia. All rights reserved.`
-</script>
 <script src="src/scripts/script-about-contact.js"></script>
 <script src="src/scripts/script-messages.js"></script>
 <script src="src/scripts/script-intro-message.js"></script>
+<script src="src/scripts/footer.js"></script>
 </body>
 </html>
