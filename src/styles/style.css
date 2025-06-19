@@ -1,3 +1,13 @@
+/* Universal Reset for HTML and Body */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* Ensure no scrollbars from overflow if content exceeds viewport */
+    overflow-x: hidden;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -521,30 +531,153 @@ h1, .dialog-intro__form {
 
 @media screen and (min-width: 700px) {
 
-    /*Dialog about*/
+    /* Dialog about form for PC */
     .dialog-about__form {
-        grid-template-rows: repeat(10, auto);
-        row-gap: 13px;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        height: 100dvh;
+        display: grid;
+        padding-top: 390px;
+        gap: 15px 50px;
+        grid-template-columns: 393px 106px 106px;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: start;
+        overflow-x: hidden;
     }
 
-    .dialog-about__container:not(.dialog-about__container:nth-child(2)) {
-        padding: 10px;
+    /* Base styles for dialog containers */
+    .dialog-about__container {
+        position: absolute;
+        opacity: 0.75;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inknut Antiqua', serif;    
+        z-index: 10;
     }
 
+    /* Styles for grid items */
+    .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators) {
+        position: unset;
+        width: auto;
+        height: 54px;
+        background-color: #0019474D;
+    }
+
+    /* About Us Title Container */
+    .dialog-about__container-title {
+        width: 605px;
+        height: 75px;
+        top: 142px;
+        right: 30%;
+        transform: translateX(-50%);
+        background-color: #0019474D;
+    }
+
+    /* Text inside the Title Container */
+    .dialog-about__container-title p {
+        width: 260px;
+        height: 35px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 100%;
+        text-align: center;
+        align-content: center;
+        color: white;
+    }
+
+    /* Subtitle Container */
     .dialog-about__container-subtitle {
-        grid-row-end: 3;
-        padding: 30px;
+        width: 846px;
+        height: 100px;
+        top: 241px;
+        left: 30%;
+        transform: translateX(-50%);
+        background-color: #28139C4D;
     }
 
+    /* Text inside the Subtitle Container */
+    .dialog-about__container-subtitle p {
+        width: 600px;
+        height: 61px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 100%;
+        text-align: center;
+        align-content: center;
+        color: white;
+    }
+
+    /* The Creators Title (TEXT ONLY - Centered) */
     .dialog-about__container-creators {
-        padding: 0;
+        position: absolute;
+        width: 317px;
+        height: 34px;
+        top: 347px;
+        left: 32%;
+        transform: translateX(-50%);
+        opacity: 1;
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: white;
+        z-index: 10;
     }
 
+    /* Styles for the 1st column (Name) containers */
     .dialog-about__container-name {
-        grid-column: 2/span 1;
+        width: 393px;
+        height: 54px;
+    }
+
+    /* Styles for the 2nd and 3rd column containers (Country, Handle) */
+    .dialog-about__form .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators):nth-of-type(3n+2),
+    .dialog-about__form .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators):nth-of-type(3n+3) {
+        width: 106px;
+    }
+
+    /* Typography for Column 1 (Names) and Column 2 (Countries) */
+    .dialog-about__container-name p,
+    .dialog-about__form .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators):nth-of-type(3n+2) p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: white;
+    }
+
+    /* Typography for Column 3 (Handle) */
+    .dialog-about__form .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators):nth-of-type(3n+3) p {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: white;
+    }
+
+    /* Grid placement for list items */
+    .dialog-about__form .dialog-about__container-name:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators) {
+        grid-column: 1;
+    }
+
+    .dialog-about__form .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators):nth-of-type(3n+2) {
+        grid-column: 2;
+    }
+
+    .dialog-about__form .dialog-about__container:not(.dialog-about__container-title):not(.dialog-about__container-subtitle):not(.dialog-about__container-creators):nth-of-type(3n+3) {
+        grid-column: 3;
     }
 }
-
 
 @media (max-width: 500px) {
      .dialog-about__container-title {
@@ -708,6 +841,8 @@ h1, .dialog-intro__form {
     .dialog-about__container-name {
         grid-column: auto / span 1;
     }
+
+    /* End of about us part */
 
     /* Header styles for mobile */
     .header {
