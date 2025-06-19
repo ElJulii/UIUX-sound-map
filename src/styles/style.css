@@ -574,7 +574,7 @@ h1, .dialog-intro__form {
         width: 605px;
         height: 75px;
         top: 142px;
-        right: 30%;
+        right: 40%;
         transform: translateX(-50%);
         background-color: #0019474D;
     }
@@ -596,7 +596,7 @@ h1, .dialog-intro__form {
         width: 846px;
         height: 100px;
         top: 241px;
-        left: 30%;
+        left: 27%;
         transform: translateX(-50%);
         background-color: #28139C4D;
     }
@@ -619,7 +619,7 @@ h1, .dialog-intro__form {
         width: 317px;
         height: 34px;
         top: 347px;
-        left: 32%;
+        left: 28%;
         transform: translateX(-50%);
         opacity: 1;
         background-color: transparent;
