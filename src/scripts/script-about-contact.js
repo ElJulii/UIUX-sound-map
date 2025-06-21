@@ -1,18 +1,34 @@
-//Buttons
+// Buttons and Dialogs
 const buttonAbout = document.querySelector('.about');
 const buttonContact = document.querySelector('.contact');
-
-//Dialogs
+const dialogIntro = document.querySelector('.dialog-intro');
 const dialogAbout = document.querySelector('.dialog-about');
 const dialogContact = document.querySelector('.dialog-contact');
-
-//country container
 const country = document.querySelector('.section-country-info');
-
-//Central message
 const centralMessage = document.querySelector('.message');
 
-buttonAbout.addEventListener('click', (e) => {
+// Helper Functions
+function resetButtonToOriginal(button, originalText, originalHandler) {
+    if (button.innerHTML.toLowerCase().includes('home')) {
+        button.innerHTML = `<span>${originalText}</span>`;
+        button.removeEventListener('click', goToHome);
+        button.addEventListener('click', originalHandler);
+    }
+}
+
+function goToHome() {
+    dialogIntro.open = true;
+    dialogAbout.open = false;
+    dialogContact.open = false;
+    country.style.display = 'none';
+    centralMessage.style.display = 'none';
+
+    resetButtonToOriginal(buttonAbout, 'about us', handleAboutClick);
+    resetButtonToOriginal(buttonContact, 'contact us', handleContactClick);
+}
+
+// Event Handlers
+function handleAboutClick(e) {
     e.preventDefault();
 
     country.style.display = 'none';
@@ -20,11 +36,16 @@ buttonAbout.addEventListener('click', (e) => {
     dialogAbout.open = true;
     dialogIntro.open = false;
 
-    centralMessage.style.display = 'none'
+    centralMessage.style.display = 'none';
 
-})
+    resetButtonToOriginal(buttonContact, 'contact us', handleContactClick);
 
-buttonContact.addEventListener('click', (e) => {
+    buttonAbout.innerHTML = '<span>home</span>';
+    buttonAbout.removeEventListener('click', handleAboutClick);
+    buttonAbout.addEventListener('click', goToHome);
+}
+
+function handleContactClick(e) {
     e.preventDefault();
 
     country.style.display = 'none';
@@ -32,7 +53,19 @@ buttonContact.addEventListener('click', (e) => {
     dialogContact.open = true;
     dialogIntro.open = false;
 
-    centralMessage.style.display = 'none'
+    centralMessage.style.display = 'none';
 
-})
+    resetButtonToOriginal(buttonAbout, 'about us', handleAboutClick);
 
+    buttonContact.innerHTML = '<span>home</span>';
+    buttonContact.removeEventListener('click', handleContactClick);
+    buttonContact.addEventListener('click', goToHome);
+}
+
+// Initial Setup
+buttonAbout.addEventListener('click', handleAboutClick);
+buttonContact.addEventListener('click', handleContactClick);
+
+document.addEventListener('DOMContentLoaded', () => {
+    goToHome();
+});
