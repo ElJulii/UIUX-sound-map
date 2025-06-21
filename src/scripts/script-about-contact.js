@@ -6,6 +6,7 @@ const dialogAbout = document.querySelector('.dialog-about');
 const dialogContact = document.querySelector('.dialog-contact');
 const country = document.querySelector('.section-country-info');
 const centralMessage = document.querySelector('.message');
+const exploreButton = dialogIntro.querySelector('button');
 
 // Helper Functions
 function resetButtonToOriginal(button, originalText, originalHandler) {
@@ -62,10 +63,35 @@ function handleContactClick(e) {
     buttonContact.addEventListener('click', goToHome);
 }
 
-// Initial Setup
+function handleExploreClick(e) {
+    e.preventDefault();
+
+    dialogIntro.open = false;
+
+    centralMessage.style.display = 'block';
+    centralMessage.style.opacity = '1';
+
+    setTimeout(() => {
+        centralMessage.style.opacity = '0';
+    }, 50);
+
+    setTimeout(() => {
+        centralMessage.style.display = 'none';
+    }, 7000 + 50);
+
+    resetButtonToOriginal(buttonAbout, 'about us', handleAboutClick);
+    resetButtonToOriginal(buttonContact, 'contact us', handleContactClick);
+}
+
+// Initial Event Listeners
 buttonAbout.addEventListener('click', handleAboutClick);
 buttonContact.addEventListener('click', handleContactClick);
 
+if (exploreButton) {
+    exploreButton.addEventListener('click', handleExploreClick);
+}
+
+// Initial Setup
 document.addEventListener('DOMContentLoaded', () => {
     goToHome();
 });
